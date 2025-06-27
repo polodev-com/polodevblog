@@ -1,7 +1,6 @@
 import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
-// import "@catppuccin/vscode/themes/frappe"; // Import for rehype-starry-night
 
 const geistSans = Geist({
     variable: "--font-geist-sans",

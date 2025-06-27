@@ -30,8 +30,7 @@ const defaultListQueries: ArticleListQueries = {
     page: 1,
     pageSize: 10,
     sortby: 'publish_on',
-    sorttype: 'desc',
-    keywords: ''
+    sorttype: 'desc'
 }
 
 

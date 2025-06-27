@@ -30,9 +30,3 @@ COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
 USER nextjs
 CMD ["npm", "start"]
-
-#FROM base as dev
-#ENV NODE_ENV=development
-#RUN npm install # For dev, install all dependencies
-#COPY . .
-#CMD npm run dev

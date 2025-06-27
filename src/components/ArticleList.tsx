@@ -5,7 +5,7 @@ import {ArticleCard} from "@/components/ArticleCard";
 
 export const ArticleList = () => {
     const [page, setPage] = useState(1);
-    const {articles, isLoading, isError} = useArticles({page, pageSize: 10});
+    const {articles, isLoading} = useArticles({page, pageSize: 10});
     const [allArticles, setAllArticles] = useState<Article[]>([]);
 
     // Setup the intersection observer for infinite scrolling

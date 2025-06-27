@@ -44,7 +44,7 @@ export const ArticleList = () => {
 
     return (
         <div className="space-y-8">
-            <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-5 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
                 {allArticles.map((article) => (
                     <ArticleCard key={article.id} article={article}/>
                 ))}
@@ -58,11 +58,11 @@ export const ArticleList = () => {
             )}
 
             {/* Error message */}
-            {isError && (
-                <div className="col-span-full text-center text-red-500 py-4">
-                    Error loading articles. Please try again.
-                </div>
-            )}
+            {/*{isError && (*/}
+            {/*    <div className="col-span-full text-center text-red-500 py-4">*/}
+            {/*        Error loading articles. Please try again.*/}
+            {/*    </div>*/}
+            {/*)}*/}
 
             {/* Intersection observer target - when this comes into view, load more */}
             {hasMoreContent && (

@@ -3,6 +3,7 @@ import type {NextConfig} from "next";
 const nextConfig: NextConfig = {
     env: {
         PUBLIC_CMS_API_HOST: 'https://cms-api.polodev.com',
+        // PUBLIC_CMS_API_HOST: 'http://localhost:3005',
     },
     images: {
         remotePatterns: [

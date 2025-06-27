@@ -8,6 +8,7 @@ import MDEditor from '@uiw/react-md-editor';
 import {CustomNavbar} from "@/components/CustomNavbar";
 import {Article} from "@/services/cmsApi";
 import Image from "next/image";
+import {formatDate} from "@/utils";
 
 export const ArticleContent = ({article}: { article: Article }) => {
     const [markdownContent, setMarkdownContent] = useState("");
@@ -28,7 +29,7 @@ export const ArticleContent = ({article}: { article: Article }) => {
                            alt={article.author.name}/>
                     <div>
                         <p className="font-semibold text-gray-800">{article.author.name}</p>
-                        <p>{article.publish_on}</p>
+                        <p>{formatDate(article.publish_on)}</p>
                     </div>
                 </div>
                 {/* The `prose` class from TailwindCSS provides beautiful typography styling for markdown content */}

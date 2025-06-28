@@ -32,17 +32,7 @@ export const ArticleContent = ({article}: { article: Article }) => {
                         <p>{formatDate(article.publish_on)}</p>
                     </div>
                 </div>
-                {/* The `prose` class from TailwindCSS provides beautiful typography styling for markdown content */}
-                {/*<article className="prose lg:prose-xl max-w-none">*/}
                 <article>
-                    {/*<MarkdownHooks remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>*/}
-                    {/*    {article.markdownContent}*/}
-                    {/*</MarkdownHooks>*/}
-                    {/*<MDEditor*/}
-                    {/*    value={article.markdownContent}*/}
-                    {/*    fullscreen={true}*/}
-                    {/*    // onChange={setValue}*/}
-                    {/*/>*/}
                     <MDEditor.Markdown source={markdownContent}
                                        style={{whiteSpace: 'pre-wrap'}}
                                        wrapperElement={{"data-color-mode": "light"}}

@@ -11,6 +11,7 @@
   "dependencies": {
     "@catppuccin/vscode": "^3.17.0",
     "@next/env": "^15.3.4",
+    "@next/third-parties": "^15.3.5",
     "@tailwindcss/cli": "^4.1.8",
     "@uiw/react-md-editor": "^4.0.7",
     "next": "15.3.3",

@@ -42,7 +42,7 @@ export function useArticles(queryOptions: Partial<ArticleListQueries> = {}) {
     const queryString = new URLSearchParams(queries).toString();
 
     const {data, error, isLoading} = useSWR(
-        `${process.env.PUBLIC_CMS_API_HOST}/articles?${queryString}`,
+        `${process.env.NEXT_PUBLIC_CMS_API_HOST}/articles?${queryString}`,
         fetcher,
         {
             revalidateIfStale: false,
@@ -59,7 +59,7 @@ export function useArticles(queryOptions: Partial<ArticleListQueries> = {}) {
 }
 
 export async function getArticleById(id: string): Promise<Article> {
-    const response = await fetch(`${process.env.PUBLIC_CMS_API_HOST}/articles/${id}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_CMS_API_HOST}/articles/${id}`);
 
     if (!response.ok) {
         throw new Error('Failed to fetch article');

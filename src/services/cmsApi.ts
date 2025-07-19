@@ -41,6 +41,8 @@ export function useArticles(queryOptions: Partial<ArticleListQueries> = {}) {
     // @ts-expect-error
     const queryString = new URLSearchParams(queries).toString();
 
+    console.log("[Tim debug] [useArticles] process.env.NEXT_PUBLIC_CMS_API_HOST", process.env.NEXT_PUBLIC_CMS_API_HOST);
+
     const {data, error, isLoading} = useSWR(
         `${process.env.NEXT_PUBLIC_CMS_API_HOST}/articles?${queryString}`,
         fetcher,
